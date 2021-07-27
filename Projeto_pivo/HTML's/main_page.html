@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+      <link rel="stylesheet" href="./main_page.css">
+    </head>
+    <body>
+      <br>
+      <form action="/" method="POST">
+        <input type="submit" name="change_settings" value="change settings">
+      </form>
+      <form action="/" method="POST">
+        <input type="submit" name="reboot_button" value="reboot">
+      </form>
+      <br>
+      <br>
+      GATEWAY n0: ESPTESTE2  000000000000
+      <br>
+      <br>
+      GATEWAY n1: ESPTESTE2  000000000000
+      <br>
+      <br>
+      GATEWAY n2: ESPTESTE2  000000000000
+      <br>
+      <br>
+      <br>
+      chip id: 
+      <br>
+      ESP32-942E8BAE114C
+      <br>
+      <br>
+      tag: 
+      <div id="tag_replace">ESP32-TEST</div>
+      <br>
+      wifi password: 
+      <div id="wifi_password_replace">00000000</div>
+      <br>
+      webserver user: 
+      <div id="webserver_user_replace">admin</div>
+      <br>
+      webserver password: <div id="webserver_password_replace">admin
+
+      </div><br>
+      led state: <div id="led_state_replace">GREEN</div>
+      <br>
+      lora state: 
+      <div id="lora_state_replace">ATIVO</div>
+      <br>
+      system state: 
+      <div id="system_state_replace">FUNCIONANDO</div>
+      <br>
+      pin state: 
+      <div id="pin_state_replace">HIGH</div>
+      <br>
+      button state: 
+      <div id="button_state_replace">LOW</div>
+      <br>
+      dc source voltage: 
+      <div id="dc_source_voltage_replace">3.0</div>
+      <br>
+      <script defer=""> 
+        const ids_html = [
+          document.getElementById("tag_replace"),
+          document.getElementById("wifi_password_replace"),
+          document.getElementById("webserver_user_replace"),
+          document.getElementById("webserver_password_replace"),
+          document.getElementById("led_state_replace"),
+          document.getElementById("lora_state_replace"),
+          document.getElementById("system_state_replace"),
+          document.getElementById("pin_state_replace"),
+          document.getElementById("button_state_replace"),
+          document.getElementById("dc_source_voltage_replace")
+        ];
+
+        function require_post() 
+        {
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', '/', true);
+          xhr.responseType = 'text';
+          xhr.onload = function () 
+          {  
+            if (xhr.readyState === xhr.DONE) 
+            {
+              if (xhr.status === 200) 
+              {
+                var text = xhr.responseText;
+
+                for (var j = 0; j < ids_html.length; j++)
+                {
+                  ids_html[j].innerHTML = "";
+                }
+                for (var i = 0, j = 0; i < (text.length - 1); i++)
+                {
+                  if (text[i] != ";")
+                  {
+                    ids_html[j].innerHTML += text[i]; 
+                  } 
+                  else 
+                  {
+                    j++;
+                  }
+                }
+              //  element.innerHTML = xhr.responseText;
+              //  window.scrollTo(0,document.body.scrollHeight);
+              }
+            } 
+          }
+          xhr.send(null);
+        };
+        setInterval(require_post, 1000);
+      </script>
+    </body>
+  </html>
+<html>

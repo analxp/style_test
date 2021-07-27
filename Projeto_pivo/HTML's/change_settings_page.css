@@ -1,0 +1,12 @@
+html
+{
+  margin: 0;
+  position: relative;
+  display: inline-flexbox;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+

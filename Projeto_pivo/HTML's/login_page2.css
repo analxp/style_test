@@ -1,0 +1,96 @@
+@font-face 
+{
+    font-family: Monteserrat;
+    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+html, body
+{
+  height: 100%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  font-family: Monteserrat;
+
+  background-color: #fafcff;
+}
+main
+{
+  font-size: 2em;
+  display: inline-block;
+  margin: 205px 0;
+  /* padding: 20px; */
+  background-color: #d9e2fc;
+  border: none;
+  border-radius: 15px;
+}
+form
+{
+  position: relative;
+  display: inline-flexbox;
+  margin: 20px;
+}
+label
+{
+  margin: 0;
+  height: 40px;
+
+  font-family: Monteserrat;
+  color: #333033;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+input
+{
+  margin: 0;
+  height: 40px;
+  width: 500px;
+  margin: 5px 10px;
+  padding: 5px 15px;
+
+  display: table-cell;
+  vertical-align: middle;
+
+  font-family: Monteserrat;
+  font-size: 24px;
+  color: #262526;
+  border: 2px solid;
+  border-color: #5E83F2;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+}
+input:focus
+{
+  outline: none;
+  border: 2px solid;
+  border-color: #2f5ce4;
+  border-radius: 5px;
+}
+.vert
+{
+  display: table;
+  width: 100%;
+  margin: 5px 5px;
+}
+.login_class
+{
+  position: relative;
+  left: 65px;
+}
+input.submit
+{
+  position: relative;
+  width: 100px;
+  left: 266px;
+
+  font-size: 20px;
+  border-color: #4C75F1;
+  background-color: #7B99F4;
+}
+input.submit:hover
+{
+  cursor: pointer;
+  color: #F2F2F2;
+  border-color: #2f5ce4;
+  background-color: #4c75f1;
+}

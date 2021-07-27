@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Log Page</title>
+      <link rel="stylesheet" href="./log_page.css">
+    </head>
+    <body>
+      <div id="text"></div>
+      <script defer=""> 
+          const element = document.getElementById("text");
+
+          function require_post() 
+          {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/log', true);
+            xhr.responseType = 'text';
+            xhr.onload = function () 
+            {  
+              if (xhr.readyState === xhr.DONE) 
+              {
+                if (xhr.status === 200) 
+                {
+                  element.innerHTML += xhr.responseText;
+                  window.scrollTo(0,document.body.scrollHeight);
+                }
+              }
+            }
+            xhr.send(null);
+          };          
+          setInterval(require_post, 1000);          
+      </script>
+    </body>
+  </html>
