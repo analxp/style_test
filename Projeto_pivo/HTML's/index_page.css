@@ -1,0 +1,15 @@
+@font-face 
+{
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+html, body
+{
+  height: 100%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  font-family: Montserrat;
+
+  background-color: #f6f8fe;
+}

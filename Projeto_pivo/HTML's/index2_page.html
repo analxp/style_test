@@ -1,0 +1,62 @@
+      tag: <div id = "tag_replace"></div><br>
+      wifi password: <div id = "wifi_password_replace"></div><br>
+      webserver user: <div id = "webserver_user_replace"></div><br>
+      webserver password: <div id = "webserver_password_replace"></div><br>
+      led state: <div id = "led_state_replace"></div><br>
+      lora state: <div id = "lora_state_replace"></div><br>
+      system state: <div id = "system_state_replace"></div><br>
+      pin state: <div id = "pin_state_replace"></div><br>
+      button state: <div id = "button_state_replace"></div><br>
+      dc source voltage: <div id = "dc_source_voltage_replace"></div><br>
+
+      <script defer> 
+        const ids_html = [
+          document.getElementById("tag_replace"),
+          document.getElementById("wifi_password_replace"),
+          document.getElementById("webserver_user_replace"),
+          document.getElementById("webserver_password_replace"),
+          document.getElementById("led_state_replace"),
+          document.getElementById("lora_state_replace"),
+          document.getElementById("system_state_replace"),
+          document.getElementById("pin_state_replace"),
+          document.getElementById("button_state_replace"),
+          document.getElementById("dc_source_voltage_replace")
+        ];
+        function require_post() 
+        {
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', '/', true);
+          xhr.responseType = 'text';
+          xhr.onload = function () 
+          {  
+            if (xhr.readyState === xhr.DONE) 
+            {
+              if (xhr.status === 200) 
+              {
+                var text = xhr.responseText;
+                for (var j = 0; j < ids_html.length; j++)
+                {
+                  ids_html[j].innerHTML = "";
+                }
+                for (var i = 0, j = 0; i < (text.length - 1); i++)
+                {
+                  if (text[i] != ";")
+                  {
+                    ids_html[j].innerHTML += text[i]; 
+                  } 
+                  else 
+                  {
+                    j++;
+                  }
+                }
+              //  element.innerHTML = xhr.responseText;
+              //  window.scrollTo(0,document.body.scrollHeight);
+              }
+            } 
+          }
+          xhr.send(null);
+        };  
+        setInterval(require_post, 1000); 
+      </script>
+    </body>
+  </html>
