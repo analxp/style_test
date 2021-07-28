@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login Page</title>
+      
+      <style>
+        html, body
+        {
+          height: 100%;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          font-family: Montserrat;
+          background-color: #f6f8fe;
+        }
+        main
+        {
+          font-size: 2em;
+          display: inline-block;
+          margin: 205px 0;
+          background-color: #d9e2fc;
+          border: none;
+          border-radius: 15px;
+        }
+        form
+        {
+          position: relative;
+          margin: 20px;
+        }
+        label
+        {
+          margin: 0;
+          height: 40px;
+          font-family: Montserrat;
+          color: #333033;
+
+          display: table-cell;
+          vertical-align: middle;
+        }
+        input
+        {
+          margin: 0;
+          height: 40px;
+          width: 500px;
+          margin: 5px 10px;
+          padding: 5px 15px;
+          font-family: Montserrat;
+          font-size: 24px;
+          color: #262526;
+          border: 2px solid;
+          border-color: #5E83F2;
+          border-radius: 5px;
+          background-color: #F2F2F2;
+
+          display: table-cell;
+          vertical-align: middle;
+          
+        }
+        input:focus
+        {
+          outline: none;
+          border: 2px solid;
+          border-color: #2f5ce4;
+          border-radius: 5px;
+        }
+        .vert
+        {
+          display: table;
+          width: 100%;
+          margin: 5px 5px;
+        }
+        .login_class
+        {
+          position: relative;
+          left: 65px;
+        }
+        input.submit
+        {
+          position: relative;
+          width: 100px;
+          left: 266px;
+          font-size: 20px;
+          border-color: #4C75F1;
+          background-color: #7B99F4;
+        }
+        input.submit:hover
+        {
+          cursor: pointer;
+          color: #F2F2F2;
+          border-color: #2f5ce4;
+          background-color: #4c75f1;
+        }
+      </style>
+    </head>
+    <body>
+      <main>
+        <form action="/" method="POST">
+          <table>
+            <tr>
+              <td>
+                <label for="" class="login_class">Login:</label>
+              </td>
+              <td>
+                <input type="text" name="user" placeholder="Digite seu nome de usuário" maxlength="29">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Password:</label> 
+              </td>
+              <td>
+                <input type="password" name="password" placeholder="Digite sua senha" maxlength="29">  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Enviar" class="submit">
+              </td>
+            </tr>
+          </table>       
+        </form>
+      </main>
+    </body>
+  </html>
