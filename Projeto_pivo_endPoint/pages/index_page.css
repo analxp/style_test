@@ -16,8 +16,8 @@ html, body
 main
 {
   width: 470px;
-  padding: 20px;
-  margin: 15px auto;
+  padding: 17.5px 15px 15px 15px;
+  margin: 12.5px auto;
   background-color: #d9e2fc;
   border: none;
   border-radius: 15px;
@@ -27,7 +27,7 @@ h3, h5
 {
   position: relative;
   top: -5px;
-  margin: 0 auto;
+  margin: 0;
 }
 #div_BUTTON, #div_ESP, #div_GATEWAY
 {
@@ -60,7 +60,7 @@ table
   display: block;
   width: 200px;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 10px 7.5px;
 }
 #div_TAG td
 {
@@ -72,7 +72,7 @@ table
 {
   display: block;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 10px 7.5px;
   width: 415px;
 }
 #div_GATEWAYS td
