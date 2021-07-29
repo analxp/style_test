@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+
+      <style>
+        html, body
+        {
+          margin: 0;
+          text-align: center;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          height: 544px;
+
+          background-color: #f6f8fe;
+          color: #333033;
+        }
+        main
+        {
+          width: 470px;
+          padding: 20px;
+          margin: 15px auto;
+          background-color: #d9e2fc;
+          border: none;
+          border-radius: 15px;
+          text-align: center;
+        }
+        h3, h5
+        {
+          position: relative;
+          top: -5px;
+          margin: 0 auto;
+        }
+        #div_BUTTON, #div_ESP, #div_GATEWAY
+        {
+          text-align: center;
+        }
+        #div_ESP, #div_GATEWAY
+        {
+          padding: 5px;
+          margin: auto;
+          margin-top: 5px;
+          border-radius: 5px;
+        }
+        #div_TAG, #div_GATEWAYS
+        {
+          text-align: center;
+          display: flex; 
+          width: 450px;
+          margin: 0px auto;
+          background-color: #9ab0f4;
+          border-radius: 25px;
+        }
+        table
+        {
+
+          text-align: center;
+          margin: 0 0 0 7.5px;
+        }
+        #div_TAG tr
+        {
+          display: block;
+          width: 200px;
+          text-align: center;
+          margin: 10px 0;
+        }
+        #div_TAG td
+        {
+          display: block;
+          padding: 5px;
+          border-radius: 50px;
+        }
+        #div_GATEWAYS tr
+        {
+          display: block;
+          text-align: center;
+          margin: 10px 0;
+          width: 415px;
+        }
+        #div_GATEWAYS td
+        {
+          display: block;
+          padding: 5px;
+          border-radius: 50px;
+        }
+        input
+        {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: #262526;
+          font-size: 15px;
+          font-weight: 600;
+          
+          background-color: #9AB0F4;
+          border: 2px solid;
+          border-radius: 5px;
+          border-color: #6C8CEF;
+          margin: 0 10px;
+          padding: 5px;
+          width: 200px;
+        }
+        input:hover
+        {
+          cursor: pointer;
+          color: #F2F2F2;
+          border-color: #3E68EA;
+          background-color: #6C8CEF;
+        }
+        td
+        {
+          background-color: #6C8CEF;
+          color: #F2F2F2;
+          font-size: 14px;
+        }
+      </style>
+    </head>
+    <body>
+      <main>
+        <div id="div_BUTTON">
+          <form action="/" method="POST">
+            <input type="submit" name="change_settings" value="change settings">
+            <input type="submit" name="reboot_button" value="REBOOT">
+          </form>  
+        </div>
+        <div id="div_ESP">
+          <h3>
+            ESP - TAG'S
+          </h3>
+          <h5 style="background-color: #6c8cef; width: 250px; border-radius: 50px; padding: 5px 0; color: #f2f2f2; font-weight: normal;">
+            CHIP ID: ESP32-942E8BAE114C
+          </h5>
+          <div id="div_TAG">
+            <table>
+              <tr>
+                <td>
+                  tag
+                  <div id="tag_replace">ESP32-TEST</div>
+                </td>              
+              </tr>
+              <tr>
+                <td>
+                  webserver user
+                  <div id="webserver_user_replace">admin</div>
+                </td>              
+              </tr>
+              <tr>
+                <td> 
+                  led state
+                  <div id="led_state_replace">GREEN</div>
+                </td>              
+              </tr>
+              <tr>
+                <td>
+                  system state
+                  <div id="system_state_replace">FUNCIONANDO</div>
+                </td>              
+              </tr>
+              <tr>
+                <td>
+                  button state
+                  <div id="button_state_replace">LOW</div>
+                </td>              
+              </tr>
+            </table>
+            <table style="width: 180px;">
+              <tr>              
+                <td>
+                  wifi password
+                  <div id="wifi_password_replace">00000000</div>
+                </td>
+              </tr>
+              <tr>              
+                <td>
+                  webserver password
+                  <div id="webserver_password_replace">admin</div>
+                </td>
+              </tr>
+              <tr>            
+                <td>
+                  lora stat
+                  <div id="lora_state_replace">ATIVO</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  pin state
+                  <div id="pin_state_replace">HIGH</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  dc source voltage
+                  <div id="dc_source_voltage_replace">3.0</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+        </div>
+        <div id="div_GATEWAY">      
+          <h3>
+            GATEWAYS
+          </h3>
+          <div id="div_GATEWAYS">
+            <table>          
+              <tr>
+                <td>
+                  GATEWAY n0: ESPTESTE2  000000000000
+                </td>              
+              </tr>
+              <tr>
+                <td>
+                  GATEWAY n1: ESPTESTE2  000000000000
+                </td>              
+              </tr>
+              <tr>
+                <td>
+                  GATEWAY n2: ESPTESTE2  000000000000
+                </td>              
+              </tr>              
+            </table>
+          </div>
+        </div> 
+        
+        <script defer=""> 
+          const ids_html = [
+            document.getElementById("tag_replace"),
+            document.getElementById("wifi_password_replace"),
+            document.getElementById("webserver_user_replace"),
+            document.getElementById("webserver_password_replace"),
+            document.getElementById("led_state_replace"),
+            document.getElementById("lora_state_replace"),
+            document.getElementById("system_state_replace"),
+            document.getElementById("pin_state_replace"),
+            document.getElementById("button_state_replace"),
+            document.getElementById("dc_source_voltage_replace")
+          ];
+
+          function require_post() 
+          {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/', true);
+            xhr.responseType = 'text';
+            xhr.onload = function () 
+            {  
+              if (xhr.readyState === xhr.DONE) 
+              {
+                if (xhr.status === 200) 
+                {
+                  var text = xhr.responseText;
+
+                  for (var j = 0; j < ids_html.length; j++)
+                  {
+                    ids_html[j].innerHTML = "";
+                  }
+                  for (var i = 0, j = 0; i < (text.length - 1); i++)
+                  {
+                    if (text[i] != ";")
+                    {
+                      ids_html[j].innerHTML += text[i]; 
+                    } 
+                    else 
+                    {
+                      j++;
+                    }
+                  }
+                //  element.innerHTML = xhr.responseText;
+                //  window.scrollTo(0,document.body.scrollHeight);
+                }
+              } 
+            }
+            xhr.send(null);
+          };
+          setInterval(require_post, 1000);
+        </script>  
+      </main>      
+    </body>
+  </html>
+<html>
