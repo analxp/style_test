@@ -6,65 +6,93 @@
 html, body
 {
   margin: 0;
-  position: relative;
   text-align: center;
   font-family: Montserrat;
+  height: 544px;
 
   background-color: #f6f8fe;
+  color: #333033;
 }
 main
 {
-  width: 600px;
-  padding: 30px;
-  margin: 45px auto;
+  width: 470px;
+  padding: 20px;
+  margin: 15px auto;
   background-color: #d9e2fc;
   border: none;
   border-radius: 15px;
+  text-align: center;
 }
-h2
+h3, h5
 {
+  position: relative;
+  top: -5px;
   margin: 0 auto;
 }
 #div_BUTTON, #div_ESP, #div_GATEWAY
 {
-  margin: 5px auto;
   text-align: center;
+}
+#div_ESP, #div_GATEWAY
+{
+  padding: 5px;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 5px;
 }
 #div_TAG, #div_GATEWAYS
 {
   text-align: center;
   display: flex; 
-  width: 400px;
-  margin: 5px auto;
+  width: 450px;
+  margin: 0px auto;
+  background-color: #9ab0f4;
+  border-radius: 25px;
 }
 table
 {
 
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0 0 7.5px;
 }
 #div_TAG tr
 {
   display: block;
+  width: 200px;
   text-align: center;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 #div_TAG td
 {
   display: block;
+  padding: 5px;
+  border-radius: 50px;
+}
+#div_GATEWAYS tr
+{
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  width: 415px;
+}
+#div_GATEWAYS td
+{
+  display: block;
+  padding: 5px;
+  border-radius: 50px;
 }
 input
 {
   font-family: Montserrat;
   color: #262526;
-  font-size: 20px;
+  font-size: 15px;
   
   background-color: #9AB0F4;
   border: 2px solid;
   border-radius: 5px;
   border-color: #6C8CEF;
-  margin: 10px;
-  padding: 10px 10px;
+  margin: 0 10px;
+  padding: 5px;
   width: 200px;
 }
 input:hover
@@ -73,4 +101,10 @@ input:hover
   color: #F2F2F2;
   border-color: #3E68EA;
   background-color: #6C8CEF;
+}
+td
+{
+  background-color: #6C8CEF;
+  color: #F2F2F2;
+  font-size: 14px;
 }
