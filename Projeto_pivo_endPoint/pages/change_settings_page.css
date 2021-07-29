@@ -1,12 +1,90 @@
-html
+@font-face 
 {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+html, body
+{
+  background-color: #f6f8fe;
   margin: 0;
-  position: relative;
-  display: inline-flexbox;
-  align-items: center;
-  align-content: center;
   text-align: center;
-  font-size: 1.5em;
+  display: inline-block;
+  font-family: Montserrat;
+}
+main
+{
+  margin: 15px;
+  padding: 15px 15px 17.5px 15px;
+  background-color: #d9e2fc;
+  border-radius: 7.5px;
+}
+#div_SETTINGS, #div_GATEWAY
+{
+  margin: 15px 7.5px 0 7.5px;
+  padding: 7.5px;
+  width: 750px;
+  background-color: #9ab0f4;
+  text-align: justify;
+  border-radius: 15px;
+}
+h3
+{
+  text-align: center;
+  margin: 0 ;
+}
+#div_SETTINGS form, #div_GATEWAY form
+{
+  background-color: #6c8cef;
+  margin: 5px;
+  padding: 10px 5px;
+  border-radius: 50px;
+}
+#div_SETTINGS input, #div_GATEWAY input
+{
+  cursor: pointer;
+  outline: none;
+  width: 100px;
+}
+table
+{
+  margin: 0 auto;
+  display: table;
+}
+input.submit
+{
+  cursor: pointer;
+  font-family: Montserrat;
+  color: #262526;
+  font-size: 15px;
+  
+  background-color: #9AB0F4;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #6C8CEF;
+  margin: 0 10px;
+  padding: 5px;
+  width: 200px;
 }
 
-
+input.submit:hover
+{
+  color: #F2F2F2;
+  border-color: #3E68EA;
+  background-color: #6C8CEF;
+}
+#div_SETTINGS input.submit, #div_GATEWAY input.submit
+{
+  color: #F2F2F2;
+  border-color: #4C75F1;
+  background-color: #7B99F4;
+}
+#div_SETTINGS input.submit:hover, #div_GATEWAY input.submit:hover
+{
+  color: #F2F2F2;
+  border-color: #2f5ce4;
+  background-color: #4c75f1;
+}
+#div_TAG
+{
+  display: flex;
+}

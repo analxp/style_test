@@ -6,51 +6,122 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Settings Page</title>
       <link rel="stylesheet" href="./change_settings_page.css">
+
+      <style>
+        
+      </style>
     </head>
     <body>
-      <div>
-        <form action="/" method="POST">
-          <input type="submit" name="home_button" value="Home">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          change_tag: 
-          <input type="text" name="change_tag">
-          <input type="submit" value="Submit">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          change_wifi_password: 
-          <input type="text" name="change_wifi_password"> 
-          <input type="submit" value="Submit">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          change_webserver_user: 
-          <input type="text" name="change_webserver_user">
-          <input type="submit" value="Submit">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          change_webserver_password: 
-          <input type="text" name="change_webserver_password">
-          <input type="submit" value="Submit">
-        </form>  
-        <br>        
-        <form action="/" method="POST">
-          gateway n0: ESPTESTE2  000000000000
-          <input type="submit" name="unpair0" value="Delete">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          gateway n1: ESPTESTE2  000000000000
-          <input type="submit" name="unpair1" value="Delete">
-        </form>  
-        <br>  
-        <form action="/" method="POST">
-          gateway n2: ESPTESTE2  000000000000
-          <input type="submit" name="unpair2" value="Delete">
-        </form>
-      </div>
+      <main>
+        <div id="div_BUTTON">
+          <form action="/" method="POST">
+            <input type="submit" name="home_button" value="Home" class="submit">
+          </form>
+        </div>
+        <div id="div_SETTINGS">
+          <h3>
+            CHANGE SETTINGS
+          </h3>
+          <div id="TAG">
+            <table>
+              <tr>
+                <td>
+                  <form action="/" method="POST">
+                    change_tag: 
+                  </form>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="/" method="POST">
+                    change_wifi_password: 
+                  </form> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="/" method="POST">
+                    change_webserver_user: 
+                  </form>  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="/" method="POST">
+                    change_webserver_password: 
+                  </form>
+                </td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>
+                  <form action="">
+                    <input type="text" name="change_tag">
+                    <input type="submit" value="Submit" class="submit"> 
+                  </form>                    
+                  </form> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="">
+                    <input type="text" name="change_wifi_password"> 
+                  <input type="submit" value="Submit" class="submit"> 
+                </form>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="">
+                    <input type="text" name="change_webserver_user">
+                  <input type="submit" value="Submit" class="submit">
+                </form>                  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form action="">
+                    <input type="text" name="change_webserver_password">
+                  <input type="submit" value="Submit" class="submit">
+                </form>                  
+                </td>
+              </tr>
+            </table> 
+          </div>          
+        </div>
+        <div id="div_GATEWAY">
+          <h3>
+            GATEWAY
+          </h3>
+          <table>
+            <tr>
+              <td>
+                <form action="/" method="POST">
+                  gateway n0: ESPTESTE2  000000000000
+                  <input type="submit" name="unpair0" value="Delete" class="submit">
+                </form>  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <form action="/" method="POST">
+                  gateway n1: ESPTESTE2  000000000000
+                  <input type="submit" name="unpair1" value="Delete" class="submit">
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>  
+                <form action="/" method="POST">
+                  gateway n2: ESPTESTE2  000000000000
+                  <input type="submit" name="unpair2" value="Delete" class="submit">
+                </form>
+              </td>               
+            </tr>            
+          </table>
+        </div>
+      </main>      
     </body>
   </html>
