@@ -5,11 +5,72 @@
 }
 html, body
 {
-  height: 100%;
   margin: 0;
   position: relative;
   text-align: center;
   font-family: Montserrat;
 
   background-color: #f6f8fe;
+}
+main
+{
+  width: 600px;
+  padding: 30px;
+  margin: 45px auto;
+  background-color: #d9e2fc;
+  border: none;
+  border-radius: 15px;
+}
+h2
+{
+  margin: 0 auto;
+}
+#div_BUTTON, #div_ESP, #div_GATEWAY
+{
+  margin: 5px auto;
+  text-align: center;
+}
+#div_TAG, #div_GATEWAYS
+{
+  text-align: center;
+  display: flex; 
+  width: 400px;
+  margin: 5px auto;
+}
+table
+{
+
+  text-align: center;
+  margin: 0 auto;
+}
+#div_TAG tr
+{
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+#div_TAG td
+{
+  display: block;
+}
+input
+{
+  font-family: Montserrat;
+  color: #262526;
+  font-size: 20px;
+  
+  background-color: #9AB0F4;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #6C8CEF;
+  margin: 10px;
+  padding: 10px 10px;
+  width: 200px;
+}
+input:hover
+{
+  cursor: pointer;
+  color: #F2F2F2;
+  border-color: #3E68EA;
+  background-color: #6C8CEF;
 }
